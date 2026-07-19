@@ -1,1 +1,444 @@
-placeholder
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Just A Second | היעדים המרכזיים שלנו 2026</title>
+<meta name="description" content="פוסטר יעדי הצוות לשנת 2026 — Just A Second" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green: #333D36;
+    --green-mid: #626B65;
+    --sage: #B5C9AD;
+    --orange: #E88225;
+    --cream: #FFFCF5;
+    --white: #ffffff;
+    --font-title: 'Rubik', 'Assistant', sans-serif;
+    --font-body: 'Assistant', 'Rubik', sans-serif;
+  }
+  html, body { background: #ededea; }
+  body {
+    font-family: var(--font-body);
+    color: var(--green);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    padding: 12mm 0;
+  }
+
+  /* ═══ POSTER PAGE — A0 width, auto height (roll/large-format print) ═══ */
+  .poster {
+    width: 841mm;
+    max-width: 100%;
+    background: var(--cream);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 30px 90px rgba(0,0,0,0.25);
+    overflow: hidden;
+  }
+
+  /* ═══ HEADER ═══ */
+  .poster-header {
+    background: var(--green);
+    position: relative;
+    overflow: hidden;
+    padding: 26mm 30mm 20mm;
+    text-align: center;
+  }
+  .poster-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: radial-gradient(circle, var(--cream) 1.5px, transparent 1.5px);
+    background-size: 9mm 9mm;
+  }
+  .poster-header::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 4mm;
+    background: var(--orange);
+  }
+  .poster-header > * { position: relative; z-index: 1; }
+  .header-logo { height: 16mm; width: auto; margin: 0 auto 12mm; display: block; }
+  .header-eyebrow {
+    font-family: var(--font-body);
+    font-size: 6.5pt;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 700;
+    margin-bottom: 6mm;
+  }
+  .header-year {
+    font-family: var(--font-title);
+    font-size: 78pt;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+  }
+  .header-year span { color: var(--orange); }
+  .header-title {
+    font-family: var(--font-title);
+    font-size: 26pt;
+    font-weight: 800;
+    color: var(--cream);
+    margin-top: 6mm;
+  }
+  .header-rule {
+    width: 22mm;
+    height: 1.2mm;
+    background: var(--orange);
+    border-radius: 2mm;
+    margin: 8mm auto 0;
+  }
+
+  /* ═══ GOALS GRID (magazine-style columns) ═══ */
+  .goals-wrap { padding: 16mm 16mm 4mm; }
+  .goals-columns {
+    column-count: 3;
+    column-gap: 6mm;
+  }
+  .goal-card {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    background: var(--white);
+    border: 0.3mm solid rgba(181,201,173,0.55);
+    border-top: 1.6mm solid var(--orange);
+    border-radius: 1.5mm;
+    padding: 6mm 6.5mm 7mm;
+    margin-bottom: 6mm;
+  }
+  .goal-head {
+    display: flex;
+    align-items: center;
+    gap: 3.5mm;
+    margin-bottom: 4.5mm;
+    padding-bottom: 3.5mm;
+    border-bottom: 0.25mm solid rgba(181,201,173,0.55);
+  }
+  .goal-num {
+    flex-shrink: 0;
+    width: 9mm;
+    height: 9mm;
+    border-radius: 50%;
+    background: var(--orange);
+    color: var(--white);
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: 11pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .goal-title {
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 13.5pt;
+    color: var(--green);
+    line-height: 1.25;
+  }
+  .goal-card ul { list-style: none; display: flex; flex-direction: column; gap: 2.2mm; }
+  .goal-card li {
+    display: flex;
+    gap: 2.2mm;
+    align-items: flex-start;
+    font-size: 9.3pt;
+    line-height: 1.5;
+    color: var(--green-mid);
+  }
+  .goal-card li svg {
+    width: 3.2mm; height: 3.2mm;
+    color: var(--orange);
+    fill: none; stroke: currentColor; stroke-width: 3;
+    stroke-linecap: round; stroke-linejoin: round;
+    flex-shrink: 0; margin-top: 1.3mm;
+  }
+  .goal-card li > span { flex: 1 1 auto; min-width: 0; }
+  .goal-card .sublist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3mm;
+    margin: 1.6mm 0 0 5.4mm;
+  }
+  .goal-card .sublist li {
+    font-size: 8.6pt;
+    gap: 1.8mm;
+  }
+  .goal-card .sublist li::before {
+    content: '';
+    width: 1.6mm; height: 1.6mm;
+    border-radius: 50%;
+    background: var(--sage);
+    flex-shrink: 0;
+    margin-top: 2.4mm;
+  }
+
+  /* ═══ VISION / SUCCESS CLOSING ═══ */
+  .vision {
+    margin: 4mm 16mm 16mm;
+    background: var(--green);
+    border-radius: 2mm;
+    position: relative;
+    overflow: hidden;
+    padding: 14mm 18mm;
+    text-align: center;
+  }
+  .vision::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: radial-gradient(circle, var(--sage) 1.5px, transparent 1.5px);
+    background-size: 9mm 9mm;
+  }
+  .vision > * { position: relative; z-index: 1; }
+  .vision-label {
+    font-family: var(--font-body);
+    font-size: 7pt;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 700;
+    margin-bottom: 5mm;
+  }
+  .vision-title {
+    font-family: var(--font-title);
+    font-size: 20pt;
+    font-weight: 800;
+    color: var(--cream);
+    margin-bottom: 6mm;
+  }
+  .vision-text {
+    font-family: var(--font-body);
+    font-size: 11pt;
+    line-height: 1.85;
+    color: rgba(255,250,240,0.85);
+    max-width: 660mm;
+    margin: 0 auto;
+  }
+
+  /* ═══ FOOTER ═══ */
+  .poster-footer {
+    padding: 8mm 16mm 14mm;
+    text-align: center;
+  }
+  .footer-logo { height: 10mm; width: auto; opacity: 0.85; }
+
+  /* ═══ PRINT ═══ */
+  .print-bar {
+    position: fixed;
+    top: 6mm; left: 6mm;
+    z-index: 50;
+  }
+  .print-bar button {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 13px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+  @media print {
+    html, body { background: var(--cream); padding: 0; }
+    .print-bar { display: none; }
+    .poster { width: 100%; box-shadow: none; }
+    @page { size: A0 portrait; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="print-bar"><button onclick="window.print()">הדפסת הפוסטר</button></div>
+
+  <main class="poster">
+
+    <header class="poster-header">
+      <img class="header-logo" src="logo-cream.png" alt="Just A Second" />
+      <p class="header-eyebrow">Just A Second · תוכנית עבודה שנתית</p>
+      <div class="header-year">היעדים ל<span>־2026</span></div>
+      <h1 class="header-title">היעדים המרכזיים שלנו</h1>
+      <div class="header-rule"></div>
+    </header>
+
+    <div class="goals-wrap">
+      <div class="goals-columns">
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">1</span><h2 class="goal-title">תשתיות וארגון</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הסדרת מערך התשלומים, דרישות התשלום והגבייה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>שיפור זרימת העבודה והתקשורת בצוות.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הטמעת Monday.com כמערכת הניהול המרכזית של הארגון.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>העברת כלל תוכניות העבודה למאנדיי – מכירות, מתחם כמניב, בתי המלאכה, פיקוח, ייצור, מתנדבים, החנות וכל תחומי הפעילות הנוספים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>העברת כלל הטפסים למאנדיי (לקוחות, אירועים וטפסים נוספים).</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הקמת מאגר לידים מסודר במאנדיי.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>ניהול המשימות ולוחות הזמנים באמצעות Monday.com.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>שיפור מערך ההובלות ללקוחות פרטיים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>שיפור מערכות הקופה והמחשוב.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">2</span><h2 class="goal-title">כוח אדם, מילואימניקים ומתנדבים</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הרחבת מערך המתנדבים לכ־50 מתנדבים פעילים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>כ־40% מהמתנדבים יהיו בעלי רקע בעיצוב.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>60%–70% מהמתנדבים יוכלו להוביל מוצר מתחילתו ועד סופו.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>גיוס בעלי מקצוע נוספים (חשמלאים, תופרים ועוד).</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>גיוס 2–3 נהגים מתנדבים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>יצירת מנגנון קבוע של עד חמישה מילואימניקים ביום, מתוגמלים כראוי.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>חלוקת עבודה ברורה בין העובדים, המתנדבים והמילואימניקים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>בניית תוכנית קליטה והעצמה למתנדבים, שתאפשר השתלבות מהירה, פיתוח מקצועי והגדלת העצמאות שלהם.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>קיום ערב מתנדבים כחלק מחיזוק הקהילה, ההוקרה והחיבור לארגון.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">3</span><h2 class="goal-title">בתי המלאכה, החצר והמחסנים</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>ניהול מסודר של בתי המלאכה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>ניהול וארגון המחסנים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>שיפור חזות החצר כחלק מחוויית המבקר.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>יצירת סביבת עבודה מסודרת, יעילה ונעימה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>עבודה על פי נהלים ברורים ואחידים בכל בתי המלאכה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>כל מילואימניק יודע באופן עצמאי את המשימות היומיות שלו.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>כל מילואימניק יודע לבצע את עבודתו באופן עצמאי וברמת איכות גבוהה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>בסיום כל יום עבודה, החצר, בתי המלאכה, המחסנים וכלל שטחי העבודה מסודרים, נקיים ומוכנים ליום העבודה הבא.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">4</span><h2 class="goal-title">פיתוח מוצרים ועיצוב</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>העלאת רמת העיצוב של כלל המוצרים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>גיבוש שפה עיצובית אחידה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>פיתוח מוצרי JAZ.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>פיתוח קומבינציות חדשות למוצרים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הקמת קבוצת מתנדבים ייעודית לייצור מוצרי JAZ.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הוספת Life Cycle לכל מוצר.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">5</span><h2 class="goal-title">החנות והמכירות</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הכנת תוכנית עבודה מסודרת לחצי השנה הקרובה לכל תחום המכירות, כולל יעדים, פעולות מרכזיות ומדדי הצלחה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הגדלת המכירות ל־45,000 ₪ בחודש.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הגדלת מספר המבקרים בחנות.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>שדרוג נראות החנות.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>שדרוג אזור הקופה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>שדרוג חזית החנות ואזור הטלוויזיה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>ארגון החנות בצורה מזמינה ומקצועית.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>ניצול מיטבי של שטחי התצוגה.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">6</span><h2 class="goal-title">מתחם כמניב</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הכנת תוכנית עבודה מלאה למתחם (סיורים, הרצאות, סדנאות, השכרת שטח, מכירת חבילות פעילות לארגונים).</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>פתיחת המתחם לפחות פעם אחת בשבוע אחר הצהריים באמצעות השכרת השטח לפעילויות, סדנאות ואירועים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>פתיחת פיילוט של קפה ועוגה בימי חמישי ושישי, בכפוף להיתכנות כלכלית.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>בחינת מודל לאירוח אירועים של עד כ־80 משתתפים במתחם.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">7</span><h2 class="goal-title">פירוק סלקטיבי</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הגעה ל־400 דירות עד סוף השנה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>יצירת צבר עבודה של כ־800 דירות לשנת 2027.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הרחבת שיתופי הפעולה עם יזמים.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">8</span><h2 class="goal-title">תקן הבנייה הירוקה</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>קידום הרוויזיה של התקן.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הטמעת התקן אצל לפחות שני ארגונים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>המשך קידום התקן מול כלל הגורמים.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">9</span><h2 class="goal-title">שיתופי פעולה וצמיחה</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>יצירת שיתופי פעולה אסטרטגיים עם חברות מובילות.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>השתתפות בלפחות שני כנסים מקצועיים.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">10</span><h2 class="goal-title">רשויות מקומיות והתרחבות</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>קידום קשרים עם רשויות מקומיות במטרה להקים פעילות של Just a Second בעיר או בשכונה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>עד דצמבר 2026 – התקדמות עם לפחות רשות אחת לשלב של קשר פורמלי ומשמעותי, מתוך כלל הרשויות שאיתן אנו נמצאים בקשר.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>קידום מודל שבו לפחות רשות אחת תבחן או תתחיל להעניק תמריצים ליזמים הפועלים בשיתוף עם Just a Second ובמודל של פירוק סלקטיבי.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>בחינת הקמת מתחם Just a Second נוסף בשיתוף הרשות המקומית.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">11</span><h2 class="goal-title">דיגיטל, טכנולוגיה ונתונים</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>השלמת פיתוח תוכנת הפירוק הסלקטיבי, כולל איסוף וניהול דאטה והפקת דוחות ליזמים ולשותפים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הרחבת מפת החוויה השכונתית והוספת עסקים חדשים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>שדרוג מערכות המחשוב והקופה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הוספת Life Cycle לכל מוצר.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הטמעת Monday.com בכלל הארגון:</span></li>
+          </ul>
+          <ul class="sublist">
+            <li>תוכניות עבודה.</li>
+            <li>טפסי לקוחות.</li>
+            <li>טפסי אירועים (Submissions).</li>
+            <li>מאגר הלידים.</li>
+            <li>ניהול משימות ולוחות זמנים.</li>
+          </ul>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הפיכת האתר לכלי שיווקי ומכירתי מרכזי, שמגדיל באופן שוטף את החשיפה, הפניות והמכירות.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>הגדלת קהילת הסושיאל מכ־14,000 ל־20,000 עוקבים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>יצירת תשתית דיגיטלית אחת, המחברת בין האתר, התוכנה, Monday.com, החנות והדאטה הארגונית.</span></li>
+          </ul>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-head"><span class="goal-num">12</span><h2 class="goal-title">מיתוג, קהילה ואירועי שיא</h2></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>העלאת רמת המותג וחוויית המבקר.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>חיזוק קהילת הידידים.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>קיום תערוכת עיצוב מרכזית בסוף השנה.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>קיום Pop-up עיצוב של יומיים–שלושה, המציג מעצבים היוצרים מהשפע הקיים ומבטא את תפיסת העולם של Just a Second.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>חיזוק הנראות והחוויה של Just a Second בכל נקודות המפגש עם הקהל.</span></li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+
+    <section class="vision">
+      <p class="vision-label">התמונה שאנחנו בונים אליה</p>
+      <h2 class="vision-title">תמונת ההצלחה שלנו</h2>
+      <p class="vision-text">
+        בסוף שנת 2026 Just a Second יהיה ארגון עם תשתיות ניהול חזקות, צוות מקצועי, מתנדבים ומילואימניקים משמעותיים, בתי מלאכה המתנהלים על פי נהלים ברורים, חנות פעילה ורווחית, מתחם שוקק חיים, מערכות דיגיטל מתקדמות, שותפויות משמעותיות עם חברות ורשויות מקומיות, ומעמד מוביל בתחום הפירוק הסלקטיבי, הכלכלה המעגלית והעיצוב בישראל.
+      </p>
+    </section>
+
+    <footer class="poster-footer">
+      <img class="footer-logo" src="logo.png" alt="Just A Second" />
+    </footer>
+
+  </main>
+
+</body>
+</html>
